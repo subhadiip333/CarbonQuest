@@ -1,36 +1,18 @@
 {
   "user": {
     "id": "user-123",
-    "name": "Subhadip",
-    "level": 4,
-    "xp": 470,
-    "xpNeeded": 1250,
-    "coins": 934,
-    "greenPoints": 474,
+    "name": "Alex Eco-Warrior",
+    "level": 3,
+    "xp": 320,
+    "xpNeeded": 1000,
+    "coins": 350,
+    "greenPoints": 240,
     "streakDays": 5,
-    "lastActiveDate": "2026-06-17",
-    "avatarState": "pristine",
-    "avatarScore": 100
+    "lastActiveDate": "2026-06-21",
+    "avatarState": "healthy",
+    "avatarScore": 72
   },
   "activities": [
-    {
-      "category": "Transportation",
-      "description": "Cycled 5km to the grocery store instead of driving",
-      "carbonCostKg": 0.1,
-      "carbonSavedKg": 0.95,
-      "id": "act-jhgpgtn",
-      "userId": "user-123",
-      "date": "2026-06-20T02:53:52.751Z"
-    },
-    {
-      "category": "Transportation",
-      "description": "Cycled/walked instead of driving",
-      "carbonCostKg": 0.1,
-      "carbonSavedKg": 2.4,
-      "id": "act-d9tmgna",
-      "userId": "user-123",
-      "date": "2026-06-20T02:30:51.798Z"
-    },
     {
       "id": "act-1",
       "userId": "user-123",
@@ -38,7 +20,7 @@
       "description": "Commuted 10km by electric bicycle",
       "carbonCostKg": 0.1,
       "carbonSavedKg": 1.9,
-      "date": "2026-06-17T00:22:54.961Z"
+      "date": "2026-06-21T02:34:21.633Z"
     },
     {
       "id": "act-2",
@@ -47,7 +29,7 @@
       "description": "Ate a fully plant-based lunch",
       "carbonCostKg": 0.5,
       "carbonSavedKg": 2.1,
-      "date": "2026-06-16T08:22:54.961Z"
+      "date": "2026-06-20T10:34:21.634Z"
     },
     {
       "id": "act-3",
@@ -56,7 +38,7 @@
       "description": "Turned off AC for 2 hours during peak time",
       "carbonCostKg": 0.2,
       "carbonSavedKg": 0.8,
-      "date": "2026-06-16T00:22:54.961Z"
+      "date": "2026-06-20T02:34:21.634Z"
     }
   ],
   "challenges": [
@@ -68,7 +50,7 @@
       "carbonSavedKg": 1.2,
       "xpReward": 100,
       "coinsReward": 50,
-      "completed": true,
+      "completed": false,
       "type": "daily"
     },
     {
@@ -79,7 +61,7 @@
       "carbonSavedKg": 3.5,
       "xpReward": 200,
       "coinsReward": 100,
-      "completed": true,
+      "completed": false,
       "type": "daily"
     },
     {
@@ -90,7 +72,7 @@
       "carbonSavedKg": 12,
       "xpReward": 500,
       "coinsReward": 250,
-      "completed": true,
+      "completed": false,
       "type": "weekly"
     },
     {
@@ -101,7 +83,7 @@
       "carbonSavedKg": 5,
       "xpReward": 300,
       "coinsReward": 150,
-      "completed": true,
+      "completed": false,
       "type": "community"
     }
   ],
@@ -134,14 +116,6 @@
   ],
   "leaderboard": [
     {
-      "rank": 3,
-      "name": "Subhadip",
-      "carbonSavedKg": 163.3,
-      "challengesCompleted": 18,
-      "sustainabilityScore": 100,
-      "isCurrentUser": true
-    },
-    {
       "rank": 1,
       "name": "Sarah Greenlegend",
       "carbonSavedKg": 142.5,
@@ -154,6 +128,14 @@
       "carbonSavedKg": 118.2,
       "challengesCompleted": 18,
       "sustainabilityScore": 88
+    },
+    {
+      "rank": 3,
+      "name": "Alex Eco-Warrior",
+      "carbonSavedKg": 94.8,
+      "challengesCompleted": 14,
+      "sustainabilityScore": 72,
+      "isCurrentUser": true
     },
     {
       "rank": 4,
@@ -172,37 +154,7 @@
   ],
   "journal": [
     {
-      "date": "2026-06-20",
-      "summary": "You logged \"Cycled 5km to the grocery store instead of driving\" in Transportation. Saved 0.9kg CO₂.",
-      "comparison": "Incredible effort! You are making a measurable difference."
-    },
-    {
-      "date": "2026-06-20",
-      "summary": "You logged \"Cycled/walked instead of driving\" in Transportation. Saved 2.4kg CO₂.",
-      "comparison": "Your green streak is heating up!"
-    },
-    {
-      "date": "2026-06-17",
-      "summary": "Completed Quest: \"Eco Commute Master\". Saved 12kg CO₂!",
-      "comparison": "Awarded +500 XP and +250 Coins. Keep rolling!"
-    },
-    {
-      "date": "2026-06-17",
-      "summary": "Completed Quest: \"Neighborhood Clean Sweep\". Saved 5kg CO₂!",
-      "comparison": "Awarded +300 XP and +150 Coins. Keep rolling!"
-    },
-    {
-      "date": "2026-06-17",
-      "summary": "Completed Quest: \"Green Chef\". Saved 3.5kg CO₂!",
-      "comparison": "Awarded +200 XP and +100 Coins. Keep rolling!"
-    },
-    {
-      "date": "2026-06-17",
-      "summary": "Completed Quest: \"Pedal Power\". Saved 1.2kg CO₂!",
-      "comparison": "Awarded +100 XP and +50 Coins. Keep rolling!"
-    },
-    {
-      "date": "2026-06-17",
+      "date": "2026-06-21",
       "summary": "You saved 4.8 kg CO₂ today by cycling and eating a plant-based meal.",
       "comparison": "You performed 15% better than yesterday."
     }
@@ -211,127 +163,7 @@
     {
       "sender": "ai",
       "text": "Hello! I am your CarbonQuest AI Coach. Log your daily actions or ask me for personalized eco-tips. Let's conquer carbon reduction together!",
-      "timestamp": "2026-06-17T02:22:54.961Z"
-    },
-    {
-      "sender": "user",
-      "text": "What if I stop riding my bike?",
-      "timestamp": "2026-06-20T02:31:13.863Z"
-    },
-    {
-      "sender": "ai",
-      "text": "### Superb choice! 🚲\nCycling instead of driving saves approximately **0.19 kg CO₂** per kilometer. \nIf you commute 15 km daily by bike:\n* **Monthly Savings:** ~57 kg CO₂\n* **Financial Savings:** ~$65 saved on fuel/parking\n* **Health Impact:** Burn around ~450 calories/day!\n\nKeep up the incredible work. What other commuting alternatives would you like to explore today?",
-      "timestamp": "2026-06-20T02:31:13.864Z"
-    },
-    {
-      "sender": "user",
-      "text": "is it really impactful?",
-      "timestamp": "2026-06-20T02:38:31.740Z"
-    },
-    {
-      "sender": "ai",
-      "text": "### Cool Savings on Air Conditioning ❄️\nReducing your air conditioner usage by just 1 hour today prevents around **0.8 kg CO₂** of power station emissions.\n* **Streak tip:** Set your thermostat to 24°C (75°F) instead of lower. Every degree higher saves 6% on your electricity bill!\n* **Challenge:** Can you open your windows for natural ventilation this evening?",
-      "timestamp": "2026-06-20T02:38:32.442Z"
-    },
-    {
-      "sender": "user",
-      "text": "is it really impactful?",
-      "timestamp": "2026-06-20T02:46:00.914Z"
-    },
-    {
-      "sender": "ai",
-      "text": "### Cool Savings on Air Conditioning ❄️\nReducing your air conditioner usage by just 1 hour today prevents around **0.8 kg CO₂** of power station emissions.\n* **Streak tip:** Set your thermostat to 24°C (75°F) instead of lower. Every degree higher saves 6% on your electricity bill!\n* **Challenge:** Can you open your windows for natural ventilation this evening?",
-      "timestamp": "2026-06-20T02:46:01.542Z"
-    },
-    {
-      "sender": "user",
-      "text": "is it impacful?",
-      "timestamp": "2026-06-20T02:48:34.074Z"
-    },
-    {
-      "sender": "ai",
-      "text": "### Cool Savings on Air Conditioning ❄️\nReducing your air conditioner usage by just 1 hour today prevents around **0.8 kg CO₂** of power station emissions.\n* **Streak tip:** Set your thermostat to 24°C (75°F) instead of lower. Every degree higher saves 6% on your electricity bill!\n* **Challenge:** Can you open your windows for natural ventilation this evening?",
-      "timestamp": "2026-06-20T02:48:34.552Z"
-    },
-    {
-      "sender": "user",
-      "text": "Simulate daily vegan savings",
-      "timestamp": "2026-06-20T02:51:40.669Z"
-    },
-    {
-      "sender": "ai",
-      "text": "### Awesome Challenge! Let's crunch those numbers for a daily vegan diet! 🥗\n\nGoing vegan daily is one of the most impactful personal choices for the planet and your health.\n\nHere's a simulation of your **annual impact**:\n\n*   **Annual CO₂ Savings:** ~1,500 kg CO₂e (That's like taking a cross-country flight off the books!)\n*   **Annual Financial Savings:** ~$750 (Focusing on whole, plant-based foods can be super budget-friendly!)\n*   **Wellness Impact:**\n    *   **Heart Health:** Lower risk of heart disease.\n    *   **Energy Levels:** Often leads to increased fiber intake and sustained energy.\n    *   **Overall Well-being:** Supports healthy weight management and nutrient intake.\n\nYou're a sustainability superstar! What other impactful actions are you curious about?",
-      "timestamp": "2026-06-20T02:51:45.442Z"
-    },
-    {
-      "sender": "user",
-      "text": "is it impactful?",
-      "timestamp": "2026-06-20T02:53:21.133Z"
-    },
-    {
-      "sender": "ai",
-      "text": "### Absolutely, it's incredibly impactful! 🌱\n\nSwitching to a daily vegan diet is one of the **most significant individual actions** you can take to reduce your carbon footprint.\n\nThink of it this way:\n\n*   **1,500 kg CO₂e annual savings** is equivalent to driving a gasoline-powered car over 6,000 km (or nearly 3,800 miles)!\n*   It significantly reduces land use, water consumption, and pollution associated with animal agriculture.\n\nIt's a game-changer, both for the planet and your personal well-being! What's next on your sustainability quest?",
-      "timestamp": "2026-06-20T02:53:23.337Z"
-    },
-    {
-      "sender": "user",
-      "text": "What if I become vegan from today?",
-      "timestamp": "2026-06-20T03:08:44.237Z"
-    },
-    {
-      "sender": "ai",
-      "text": "### The Power of Plant-Based Meals 🥗\nTransitioning just one meal from beef to plant-based reduces emissions by over **2.1 kg CO₂**.\n* **Annual Impact:** Over 750 kg CO₂ saved if done daily.\n* **Water Savings:** ~1,500 liters of water saved per meal.\n* **Pro Tip:** Try adding local lentils or chickpeas to boost your protein without the high carbon footprint of livestock.",
-      "timestamp": "2026-06-20T03:08:45.138Z"
-    },
-    {
-      "sender": "user",
-      "text": "how are you?",
-      "timestamp": "2026-06-20T03:17:24.980Z"
-    },
-    {
-      "sender": "ai",
-      "text": "### Greetings from CarbonQuest AI! 🌿\nI am analyzing your lifestyle profile. Here are three quick recommendations to boost your streak:\n1. **Unplug Standby Devices:** Save 0.2 kg CO₂ by cutting phantom power.\n2. **Shorter Shower Challenge:** A 5-minute shower saves 0.5 kg CO₂ and 30 liters of heated water.\n3. **Walk local errands:** If you're going under 2km, walk to earn double green coins!\n\nTell me about your travel or food plans for today, and I'll optimize them for carbon savings.",
-      "timestamp": "2026-06-20T03:17:25.988Z"
-    },
-    {
-      "sender": "user",
-      "text": "I want to go to the Kolkata airport",
-      "timestamp": "2026-06-20T03:17:57.427Z"
-    },
-    {
-      "sender": "ai",
-      "text": "### Greetings from CarbonQuest AI! 🌿\nI am analyzing your lifestyle profile. Here are three quick recommendations to boost your streak:\n1. **Unplug Standby Devices:** Save 0.2 kg CO₂ by cutting phantom power.\n2. **Shorter Shower Challenge:** A 5-minute shower saves 0.5 kg CO₂ and 30 liters of heated water.\n3. **Walk local errands:** If you're going under 2km, walk to earn double green coins!\n\nTell me about your travel or food plans for today, and I'll optimize them for carbon savings.",
-      "timestamp": "2026-06-20T03:17:58.461Z"
-    },
-    {
-      "sender": "user",
-      "text": "I want to eat vegan",
-      "timestamp": "2026-06-20T03:24:03.877Z"
-    },
-    {
-      "sender": "ai",
-      "text": "### Fantastic choice! Let's power up your plant-based journey! 🌱\n\nEating vegan is a huge win for the planet and your well-being.\n\n*   **Impact:** A single vegan meal can save significant CO₂ compared to a meat-based one, plus conserve water and land!\n*   **Challenge:** Try making one of your favorite dishes vegan today! What's your go-to comfort food? Let's find a plant-based version!",
-      "timestamp": "2026-06-20T03:24:08.201Z"
-    },
-    {
-      "sender": "user",
-      "text": "What if I stop riding my bike?",
-      "timestamp": "2026-06-20T04:17:44.251Z"
-    },
-    {
-      "sender": "ai",
-      "text": "Oh no! Are you thinking about putting the brakes on your cycling streak? 🚴‍♀️\n\nIf you stop riding your bike, you'd unfortunately be missing out on some fantastic benefits!\n\nLet's look at what you'd **lose** if you stop cycling 15 km daily instead of driving:\n\n*   **Annual CO₂ Impact:** You'd be adding back approximately **684 kg CO₂** into the atmosphere. That's like driving an extra 2,700 km in a car!\n*   **Annual Financial Impact:** You'd likely spend an extra **~$780** on fuel, parking, and car maintenance.\n*   **Wellness Impact:** You'd miss out on burning those ~450 calories daily and the great cardiovascular benefits of cycling.\n\nCycling is a super-powered action for both you and the planet! Let's keep that momentum going! What's making you consider stopping? Maybe we can find a solution together!",
-      "timestamp": "2026-06-20T04:17:49.301Z"
-    },
-    {
-      "sender": "user",
-      "text": "I wan to eat vegan",
-      "timestamp": "2026-06-20T04:18:06.310Z"
-    },
-    {
-      "sender": "ai",
-      "text": "### Excellent! Let's get that vegan streak going strong! 🌱\n\nThat's a powerful choice for the planet and your health!\n\n*   **Quick Win:** For your next meal, how about focusing on a delicious plant-based protein? Think lentils, chickpeas, tofu, or tempeh!\n*   **Challenge:** Can you swap out dairy milk for a plant-based alternative (like oat, almond, or soy) in your coffee or cereal today? It's an easy win!\n\nWhat's on your menu today? Let's make it deliciously vegan!",
-      "timestamp": "2026-06-20T04:18:08.803Z"
+      "timestamp": "2026-06-21T04:34:21.634Z"
     }
   ]
 }

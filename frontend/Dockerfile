@@ -11,6 +11,8 @@ RUN npm install
 # Copy source code
 COPY . .
 
+ENV NEXT_PUBLIC_API_URL=https://carbonquest-backend-694641349102.asia-south1.run.app/api/v1
+
 # Build Next.js
 RUN npm run build
 

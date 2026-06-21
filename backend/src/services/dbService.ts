@@ -249,9 +249,11 @@ export class DbService {
   private static save() {
     if (!this.data) return;
     try {
-      fs.writeFileSync(DB_PATH, JSON.stringify(this.data, null, 2), 'utf-8');
+      // Asynchronous non-blocking file write for performance optimization
+      fs.promises.writeFile(DB_PATH, JSON.stringify(this.data, null, 2), 'utf-8')
+        .catch(err => console.error('Failed to write database file async', err));
     } catch (err) {
-      console.error('Failed to write database file', err);
+      console.error('Failed to stringify database file', err);
     }
   }
 

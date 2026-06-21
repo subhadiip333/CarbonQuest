@@ -8,6 +8,7 @@ import {
   analyzeSentiment 
 } from '../ai/geminiService';
 import { getRouteOptions, getPlaceAutocomplete } from '../services/googleMapsService';
+import { clearCache } from '../middleware/cache';
 
 // 1. User Profile Management
 export const getProfile = async (req: Request, res: Response) => {
@@ -22,6 +23,7 @@ export const getProfile = async (req: Request, res: Response) => {
 export const resetProfile = async (req: Request, res: Response) => {
   try {
     DbService.resetDb();
+    clearCache();
     res.status(200).json({ status: 'success', data: DbService.getUser() });
   } catch (error: any) {
     res.status(500).json({ status: 'error', error: error.message });
@@ -31,11 +33,8 @@ export const resetProfile = async (req: Request, res: Response) => {
 export const updateProfile = async (req: Request, res: Response) => {
   try {
     const { name } = req.body;
-    if (!name || name.trim() === '') {
-      res.status(400).json({ status: 'error', error: 'Name is required' });
-      return;
-    }
     const user = DbService.updateUser({ name: name.trim() });
+    clearCache();
     res.status(200).json({ status: 'success', data: user });
   } catch (error: any) {
     res.status(500).json({ status: 'error', error: error.message });
@@ -55,10 +54,6 @@ export const getActivities = async (req: Request, res: Response) => {
 export const createActivity = async (req: Request, res: Response) => {
   try {
     const { description } = req.body;
-    if (!description || description.trim() === '') {
-      res.status(400).json({ status: 'error', error: 'Activity description is required' });
-      return;
-    }
 
     // 1. Perform Gemini parsing to extract category and carbon metrics
     const parsedData = await parseActivityNlp(description);
@@ -98,6 +93,8 @@ export const createActivity = async (req: Request, res: Response) => {
       );
     }
 
+    clearCache();
+
     res.status(201).json({ 
       status: 'success', 
       data: {
@@ -115,10 +112,6 @@ export const createActivity = async (req: Request, res: Response) => {
 export const chatCoach = async (req: Request, res: Response) => {
   try {
     const { message } = req.body;
-    if (!message || message.trim() === '') {
-      res.status(400).json({ status: 'error', error: 'Message is required' });
-      return;
-    }
 
     // Add user message to history
     DbService.addChatMessage('user', message);
@@ -129,6 +122,8 @@ export const chatCoach = async (req: Request, res: Response) => {
 
     // Save AI message to history
     const aiMsg = DbService.addChatMessage('ai', aiResponseText);
+
+    clearCache();
 
     res.status(200).json({ status: 'success', data: aiMsg });
   } catch (error: any) {
@@ -191,6 +186,8 @@ export const completeChallenge = async (req: Request, res: Response) => {
       `Awarded +${completed.xpReward} XP and +${completed.coinsReward} Coins. Keep rolling!`
     );
 
+    clearCache();
+
     res.status(200).json({ 
       status: 'success', 
       data: {
@@ -226,6 +223,8 @@ export const forceGenerateQuests = async (req: Request, res: Response) => {
       savedQuests.push(saved);
     }
 
+    clearCache();
+
     res.status(201).json({ status: 'success', data: savedQuests });
   } catch (error: any) {
     res.status(500).json({ status: 'error', error: error.message });
@@ -250,10 +249,6 @@ export const autocompletePlaces = async (req: Request, res: Response) => {
 export const optimizeRoute = async (req: Request, res: Response) => {
   try {
     const { origin, destination } = req.body;
-    if (!origin || !destination) {
-      res.status(400).json({ status: 'error', error: 'Origin and destination are required' });
-      return;
-    }
 
     const routes = await getRouteOptions(origin, destination);
     
@@ -319,10 +314,6 @@ export const getMarketplace = async (req: Request, res: Response) => {
 export const redeemMarketplaceItem = async (req: Request, res: Response) => {
   try {
     const { id } = req.body;
-    if (!id) {
-      res.status(400).json({ status: 'error', error: 'Item ID is required' });
-      return;
-    }
 
     const item = DbService.redeemMarketplaceItem(id);
     if (!item) {
@@ -335,6 +326,8 @@ export const redeemMarketplaceItem = async (req: Request, res: Response) => {
       `Redeemed Marketplace Reward: "${item.title}"`,
       `Spent ${item.costCoins} CarbonQuest Coins. Thank you for contributing to actual green projects!`
     );
+
+    clearCache();
 
     res.status(200).json({ 
       status: 'success', 

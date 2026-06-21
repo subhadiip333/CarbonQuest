@@ -365,10 +365,10 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-zinc-100 flex flex-col font-sans selection:bg-emerald-500 selection:text-black">
+    <main className="min-h-screen bg-black text-zinc-100 flex flex-col font-sans selection:bg-emerald-500 selection:text-black">
       
       {/* Top Navbar */}
-      <nav className="sticky top-0 z-50 bg-zinc-950/80 backdrop-blur-md border-b border-zinc-900 px-6 py-4 flex items-center justify-between">
+      <header className="sticky top-0 z-50 bg-zinc-950/80 backdrop-blur-md border-b border-zinc-900 px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center text-black font-extrabold shadow-lg shadow-emerald-500/20">
             <Leaf size={22} className="stroke-[2.5]" />
@@ -410,7 +410,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </nav>
+      </header>
 
       {/* Main Container */}
       <div className="flex-1 max-w-7xl w-full mx-auto p-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
@@ -466,10 +466,10 @@ export default function Home() {
 
           {/* AI Carbon Forecast Trajectory */}
           <section className="bg-zinc-950 border border-zinc-900 p-5 rounded-3xl space-y-4">
-            <h3 className="text-sm font-bold uppercase tracking-wider text-zinc-400 flex items-center gap-2">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-zinc-400 flex items-center gap-2">
               <TrendingDown size={15} className="text-emerald-400" />
               AI Footprint Trajectory
-            </h3>
+            </h2>
             
             <div className="grid grid-cols-2 gap-3">
               <div className="bg-zinc-900/40 border border-zinc-850 p-3 rounded-2xl">
@@ -493,10 +493,10 @@ export default function Home() {
 
           {/* AI Sustainability Journal summaries */}
           <section className="bg-zinc-950 border border-zinc-900 p-5 rounded-3xl flex-1 flex flex-col">
-            <h3 className="text-sm font-bold uppercase tracking-wider text-zinc-400 flex items-center gap-2 mb-3">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-zinc-400 flex items-center gap-2 mb-3">
               <BookOpen size={15} className="text-emerald-400" />
               Sustainability Journal
-            </h3>
+            </h2>
             
             <div className="space-y-3 overflow-y-auto max-h-[220px] flex-1 pr-1 custom-scrollbar">
               {journal.length === 0 ? (
@@ -521,9 +521,10 @@ export default function Home() {
           {/* Profile Reset Button */}
           <button 
             onClick={handleResetProfile}
-            className="text-[11px] text-zinc-600 hover:text-zinc-400 transition-colors flex items-center justify-center gap-1.5 self-center pb-2"
+            aria-label="Reset User Profile"
+            className="text-[11px] text-zinc-600 hover:text-zinc-400 transition-colors flex items-center justify-center gap-1.5 self-center pb-2 focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded"
           >
-            <RefreshCw size={11} /> Reset Profile Data
+            <RefreshCw size={11} aria-hidden="true" /> Reset Profile Data
           </button>
         </div>
 
@@ -615,8 +616,8 @@ export default function Home() {
               </section>
 
               {/* Logged Activities List */}
-              <section className="bg-zinc-950 border border-zinc-900 p-5 rounded-3xl space-y-4">
-                <h3 className="text-sm font-bold uppercase tracking-wider text-zinc-400">Activity Log History</h3>
+              <section className="bg-zinc-950 border border-zinc-900 p-5 rounded-3xl space-y-4" aria-live="polite">
+                <h2 className="text-sm font-bold uppercase tracking-wider text-zinc-400">Activity Log History</h2>
                 <div className="space-y-3 overflow-y-auto max-h-[350px] pr-1 custom-scrollbar">
                   {activities.length === 0 ? (
                     <div className="text-xs text-zinc-500 text-center py-8">No activities logged yet. Type something above to start.</div>
@@ -950,6 +951,7 @@ export default function Home() {
               <button 
                 type="submit"
                 disabled={sendingChat || !chatInput.trim()}
+                aria-label="Send message to AI Coach"
                 className="bg-emerald-500 text-black p-2 rounded-xl hover:bg-emerald-400 disabled:opacity-50 transition-colors"
               >
                 {sendingChat ? <Loader2 className="animate-spin" size={14} /> : <Send size={14} />}
@@ -960,7 +962,7 @@ export default function Home() {
           {/* Active Quests & Challenges */}
           <section className="bg-zinc-950 border border-zinc-900 p-5 rounded-3xl space-y-4 shadow-lg">
             <div className="flex justify-between items-center">
-              <h3 className="text-sm font-bold uppercase tracking-wider text-zinc-400">Active Quests</h3>
+              <h2 className="text-sm font-bold uppercase tracking-wider text-zinc-400">Active Quests</h2>
               <button 
                 onClick={handleGenerateAIQuests}
                 disabled={generatingChallenges}
@@ -1060,6 +1062,6 @@ export default function Home() {
       <footer className="bg-zinc-950 border-t border-zinc-900 py-6 text-center text-xs text-zinc-600">
         <p>© 2026 CarbonQuest AI. Powered by Google Gemini 1.5 Flash and Google Cloud Services.</p>
       </footer>
-    </div>
+    </main>
   );
 }
